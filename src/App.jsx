@@ -1,11 +1,11 @@
 import React from "react"
-import Todowrapper from "./components/Todowrapper"
+import Footer from "./components/Footer"
 
 
 function App() {
   return (
     <>
-   <Todowrapper/>
+    <Footer />
     </>
   )
 }
