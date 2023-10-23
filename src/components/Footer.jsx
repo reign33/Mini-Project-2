@@ -8,7 +8,7 @@ const Footer = () => {
     console.log(year);
 
     return (
-        <footer>
+        <footer className="custom-footer">
             <div className="footer_container">
                 <div className="footr_details_one">
                     <h3>Get to Know US</h3>
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="lastdetails topborder">
-                <img src="./amazon_PNG25.png" alt="logo" />
+                <img className='object-contain h-20 w-40 ...' src="./amazon_PNG25.png" alt="logo" />
                 <div>
                 <button className="btn_color">English</button>
                 <button className="btn_color">USD-U.S. Dollar</button>
