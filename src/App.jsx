@@ -1,11 +1,14 @@
 import React from "react"
-import Todowrapper from "./components/Todowrapper"
+import Footer from "./components/Footer"
+import LoginPage from "./components/LoginPage"
+import "./index.css"
 
 
 function App() {
   return (
     <>
-   <Todowrapper/>
+    <LoginPage />
+    <Footer />
     </>
   )
 }
