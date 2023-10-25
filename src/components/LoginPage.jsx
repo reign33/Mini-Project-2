@@ -5,7 +5,7 @@ export default function LoginPage() {
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">
         <div class="logo w-32 block m-auto">
-            <img class="m-3" src="/images.png" alt="" srcset="" />
+            <img class="m-3" src="/images.png" alt="" srcSet="" />
         </div>
         {/* <!-- logo end --> */}
         <div class="loginform w-1/2 m-auto border-[1.5px] rounded-lg border-gray-200 p-[20px]">
