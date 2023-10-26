@@ -3,11 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import LoginPage from './components/LoginPage.jsx'
 import SignUpPage from './components/SignUpPage.jsx'
-
 import {
   createBrowserRouter,
   RouterProvider,
-  Link,
 } from "react-router-dom";
 
 const router = createBrowserRouter([

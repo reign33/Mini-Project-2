@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function SignUpPage() {
+  const navigate=useNavigate();
+  function handleBackToLogin(){
+    navigate('/login')
+  }
 
   return (
     <div class="m-0 p-0 box-border">
@@ -46,8 +51,8 @@ function SignUpPage() {
         {/* <!-- lowest container --> */}
         <div class="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none text-center ">
             <div class="mx-auto w-1/2">
-                <p class=" mt-5 mx-auto text-xs font-medium">Already have an account? <a
-                        class="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]" href="/">Login here</a>
+                <p class=" mt-5 mx-auto text-xs font-medium" onClick={handleBackToLogin}>Already have an account?<a
+                        class="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]">Login here</a>
                 </p>
             </div>
         </div>
