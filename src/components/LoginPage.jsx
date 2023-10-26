@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
+    const navigate = useNavigate();
+
+    function handleBackToSignUp(){
+        navigate('/signup')
+    }
   return (
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">
@@ -45,7 +51,8 @@ export default function LoginPage() {
                 New to Amazon
             </p>
             <button
-                class="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 ">Create
+                class="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 "
+                onClick={handleBackToSignUp}>Create
                 your Amazon account</button>
         </div>
 
