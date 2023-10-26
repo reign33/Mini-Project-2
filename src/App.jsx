@@ -1,13 +1,12 @@
 import React from "react"
-// import SignUpPage from "./components/SignUpPage"
-import LoginPage from "./components/LoginPage"
+import Footer from "./components/Footer"
 import "./index.css"
 
 
 function App() {
   return (
     <>
-    <LoginPage />
+    <Footer />
     </>
   )
 }
