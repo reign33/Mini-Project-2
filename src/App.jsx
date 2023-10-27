@@ -1,18 +1,23 @@
 import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer"
-import LoginPage from "./components/LoginPage"
 import "./index.css"
-import HomePage from "./components/HomePage"
-import Navbar from "./Components/Navbar"
+import Navbar from "./components/Navbar"
+import { HomePage, Checkout, SearchResult, ProductPage,
+} from "./components";
 
 function App() {
   return (
-    <>
-    <Navbar/>
-    <HomePage/>
-    <LoginPage />
-    <Footer />
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchResult />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/checkout" element={<Checkout />} />
+      </Routes>
+      <Footer/>
+    </BrowserRouter>
   )
 }
 

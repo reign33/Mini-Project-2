@@ -1,10 +1,11 @@
-import { Carousel, HomePageCard, CarouselCategory } from "./";
+import { Carousel, HomePageCard, CarouselCategory, CarouselProduct} from "./";
 
 function HomePage() {
   return (
     <div className="bg-amazonclone-background">
         <div className="min-w-[1000px] max-w-[1500px] m-auto">
             <Carousel/>
+            
             <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
                 <HomePageCard
                     title={"We have a surprise for you"}
@@ -50,7 +51,11 @@ function HomePage() {
                     <img className="xl:hidden" src={"/banner_image_2.jpg"}/>
                 </div>
             </div>
+            <CarouselProduct/>
             <CarouselCategory/>
+            <div className="h-[200px]">
+                <img className="h-[100%] m-auto" src={"/banner_image.jpg"} alt="Banner 1" />
+            </div>
         </div>
     </div>
   )

@@ -1,15 +1,22 @@
+import {Navigation, Autoplay} from 'swiper/modules';
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Autoplay } from "swiper"
 
 import "swiper/css";
 import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/scrollbar';
 
 function Carousel() {
   return (
 
             <div className='h-[600px] bg-white'>
                 <Swiper loop={true}
-                    spaceBetween={0} navigation={true} modules={[]}
+                    spaceBetween={0}
+                    modules={[Navigation, Autoplay]}
+                    navigation 
                     autoplay={{
                         delay: 4500
                     }} className="h-[50%]">
@@ -31,9 +38,10 @@ function Carousel() {
                 </Swiper>
             <div className='h-[50%] bg-gradient-to-b from-stone-900'/>
             </div>
-            
 
+    
   )
+                   
 }
 
 export default Carousel
