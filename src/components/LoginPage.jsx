@@ -1,6 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
+    const navigate = useNavigate();
+
+    function handleBackToSignUp(){
+        navigate('/signup')
+    }
   return (
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">
@@ -8,15 +14,24 @@ export default function LoginPage() {
             <img class="m-3" src="/images.png" alt="" srcset="" />
         </div>
         {/* <!-- logo end --> */}
-        <div class="loginform w-1/2 m-auto border-[1.5px] rounded-lg border-gray-200 p-[20px]">
+        <div class="loginform w-1/2 m-auto border-[2px] rounded-lg border-gray-200 p-[20px]">
             <h1 class="font-sans text-black font-normal text-3xl mb-2">Sign In</h1>
-            <p class="font-semibold text-sm mb-[1px]">
+
+            <p class="font-semibold text-sm my-[10px]">
                 Email or mobile phone number
             </p>
             <input
                 class="focus:border-[3px] outline-none focus:border-blue-200
                 border-[1px] rounded-[3px] border-[#a6a6a6] w-[100%] px-[1px] py-[1px]"
                 type="text" name="username" id="" placeholder="" />
+                <p class="font-semibold text-sm my-[10px]">
+                Password
+            </p>
+            <input
+                class="focus:border-[3px] outline-none focus:border-blue-200
+                border-[1px] rounded-[3px] border-[#a6a6a6] w-[100%] px-[1px] py-[1px] mb-[10px]"
+                type="password" name="username" id="" placeholder="" />
+
             <button class="mt-[12px] border rounded-lg py-[5px] text-sm w-[100%] bg-[#f8db02] hover:bg-[#ebd004]" type="submit">
                 Continue
             </button>
@@ -36,13 +51,14 @@ export default function LoginPage() {
                 New to Amazon
             </p>
             <button
-                class="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 ">Create
+                class="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 "
+                onClick={handleBackToSignUp}>Create
                 your Amazon account</button>
         </div>
 
         {/* <!-- lowest container --> */}
         <div class="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none ">
-            <div class="mx-auto w-1/2">
+            <div class="mx-auto w-1/2 text-center">
                 <p class=" mt-5 mx-auto text-xs font-medium"> <a
                         class="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]" href="/">Contidions
                         of Use</a> <a class="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]"
@@ -51,7 +67,7 @@ export default function LoginPage() {
                 </p>
             </div>
             <div class="mx-auto w-1/2">
-                <p class=" my-3 mx-auto max-w-fit text-gray-500 text-xs ">&copf; 1996-2023, Amazon.com, Inc. or its
+                <p class=" my-3 mx-auto max-w-fit text-gray-500 text-xs">&copy; 1996-2023, Amazon.com, Inc. or its
                     affiliates</p>
             </div>
 
