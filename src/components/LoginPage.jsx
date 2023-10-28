@@ -36,15 +36,15 @@ export default function LoginPage() {
                 Continue
             </button>
             <p class="text-xs font-medium mt-3 mb-2 text-gray-800 p-1">
-                By continuing, you agree to Amazon's
-                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/">Contitions of
-                    Use</a>
+                By continuing, you agree to Amazon's 
+                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/"> Contitions of
+                    Use </a>
                 and
-                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/">Privacy Notice</a>.
+                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/"> Privacy Notice</a>.
             </p>
             <span class="text-[8px] p-1">►</span>
             <a class="text-[#0066c0] cursor-pointer hover:underline hover:text-red-700 font-normal text-sm"
-                href="/">Need Help?</a>
+                href="/"> Need Help?</a>
         </div>
         <div class="lower mt-6 w-1/2 m-auto ">
             <p class="m-auto max-w-fit text-gray-500 text-xs ">

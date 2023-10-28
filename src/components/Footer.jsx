@@ -9,6 +9,7 @@ const Footer = () => {
 
     return (
         <footer className="custom-footer">
+            <div className='bg-[#EAEDED] text-center py-[10px] font-medium active:font-bold'><a href="/">Back to Top</a></div>
             <div className="footer_container">
                 <div className="footr_details_one">
                     <h3>Get to Know US</h3>
@@ -96,6 +97,9 @@ const Footer = () => {
                     </div>
                 </div>
             <p className='footerx'>Conditions of Use & Sale &nbsp; &nbsp;&nbsp;  Privacy Notice  &nbsp; &nbsp;&nbsp; Interest-Based Ads  &nbsp; &nbsp;&nbsp;  © 1996-{year}, Amazon.com, Inc. or its affiliates</p>
+            <p>Amazon Clone Project e-Commerce Created By Lar Conception & Ron Cley Fulgado</p>
+            <p>Guided By Prof. John Michael Baldonado Kodego Instructor</p>
+            <p>Codego Runners -WD88P August 2023 Batch</p>
             </div>
         </footer>
     )
