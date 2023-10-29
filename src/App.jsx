@@ -8,7 +8,7 @@ import { HomePage, Checkout, SearchResult, ProductPage,
 import LoginPage from './components/LoginPage.jsx'
 import SignUpPage from './components/SignUpPage.jsx'
 
-
+// changes update
 function App() {
   return (
     <BrowserRouter>
