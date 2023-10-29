@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom'
 
 export default function LoginPage() {
+    
     const navigate = useNavigate();
-
     function handleBackToSignUp(){
         navigate('/signup')
     }
+
   return (
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">

@@ -1,12 +1,9 @@
 import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer"
 import "./index.css"
-import Navbar from "./components/Navbar"
-import { HomePage, Checkout, SearchResult, ProductPage,
-} from "./components";
-import LoginPage from './components/LoginPage.jsx'
-import SignUpPage from './components/SignUpPage.jsx'
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import {HomePage, SearchResult, ProductPage, Checkout, LoginPage, SignUpPage} from "./Components";
 
 
 function App() {
@@ -21,7 +18,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </BrowserRouter>
   )
 }
