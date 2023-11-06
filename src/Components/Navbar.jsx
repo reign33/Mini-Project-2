@@ -1,7 +1,8 @@
 import {ShoppingCartIcon, MapPinIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 import "./navbar.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Search from "./Search";
 
 function Navbar() {
     const navigate=useNavigate();
