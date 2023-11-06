@@ -14,6 +14,9 @@ function Navbar() {
     function goToHomePage(){
         navigate('/')
     }
+    const Logout = () => {
+      navigate('/login')
+    }
   return (
     <header className='min-w-[1000px]'>
         <div className='flex bg-amazonclone text-white h-[60px]'>
@@ -72,6 +75,7 @@ function Navbar() {
                                     <p><a className="hover:text-[#FF9900]" href="">Recommendations</a></p>
                                     <p><a className="hover:text-[#FF9900]" href="">Browsing History</a></p>
                                     <p><a className="hover:text-[#FF9900]" href="">Watchlist</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="" onClick={Logout}>Logout</a></p>
                                 </div>
                             </div> 
                         </div>
