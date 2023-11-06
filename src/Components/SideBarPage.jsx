@@ -39,6 +39,7 @@ function SideBarPage() {
       <div className='bg-black h-[40vh]'></div>
     </Sidebar>
     
+    
   </div>
   )
 }
