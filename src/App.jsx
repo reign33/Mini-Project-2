@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 import {HomePage, SearchResult, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage} from "./Components";
 
 
+
 function App() {
 
   return (
@@ -13,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchResult />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<LoginPage />} />
