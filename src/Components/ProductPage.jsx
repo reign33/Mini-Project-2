@@ -1,10 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { ProductDetails } from "./";
+import { ProductDetails, Navbar, Footer } from "./";
 import { GB_CURRENCY } from '../utilities/constants';
 import { callAPI } from "../utilities/CallApi";
-import Navbar from "./Navbar";
-import Footer from "./Footer"
 
 
 function ProductPage() {
@@ -24,7 +22,8 @@ function ProductPage() {
   if (!product?.title) return <h1>Loading Product ...</h1>;
 
   return (
-    <><Navbar/>
+  <>
+    <Navbar/>
     product &&
     <div className='h-screen bg-amazonclone-background'>
       <div className='min-w-[1000px] max-w-[1500px] m-auto p-4'>
@@ -58,7 +57,8 @@ function ProductPage() {
         </div>
       </div>
     </div>
-    <Footer /></>)
+    <Footer />
+  </>)
 }
 
 export default ProductPage

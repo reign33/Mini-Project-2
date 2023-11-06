@@ -1,6 +1,4 @@
-import { Carousel, HomePageCard, CarouselCategory, CarouselProduct} from "./";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import { Carousel, HomePageCard, CarouselCategory, CarouselProduct, Navbar, Footer} from "./";
 
 function HomePage() {
   return (
