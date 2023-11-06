@@ -1,10 +1,22 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Autoplay } from "swiper"
+import { Navigation } from "swiper/modules";
+import { useNavigate, createSearchParams } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
 function CarouselCategory() {
+    const navigate = useNavigate();
+    const searchCategory = (category) => {
+      navigate({
+        pathname: "search",
+        search: `${createSearchParams({
+          category: `${category}`,
+          searchTerm: ``,
+        })}`,
+      });
+    };
+
   return (
     <div className="bg-white m-3">
       <div className="text-2xl font-semibold p-3">Shop by Category</div>
@@ -12,7 +24,7 @@ function CarouselCategory() {
             slidesPerView={5}
             spaceBetween={10}
             navigation={true}
-            modules={[]}
+            modules={[Navigation]}
         >
             <SwiperSlide onClick={() => searchCategory("Deals")} className="cursor-pointer">
                 <img src={"/category_0.jpg"} alt="Deal category" />

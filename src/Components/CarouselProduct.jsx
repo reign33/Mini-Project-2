@@ -1,5 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { Navigation, Autoplay } from "swiper"
+import { Navigation } from "swiper/modules"
+import { Link } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,14 +13,15 @@ function CarouselProduct() {
             slidesPerView={7}
             spaceBetween={10}
             navigation={true}
-            modules={[]}
-        
+            modules={[Navigation]}
         >
         {Array.from({ length: 9 }, (_, i) => (
-            <SwiperSlide key={i}>
-                <img src={`/product_${i}_small.jpg`}
-                    alt="Carousel product"/>
-            </SwiperSlide>
+          <SwiperSlide key={i}>
+            <Link to={`../product/${i}`}>
+              <img src={`../product_${i}_small.jpg`}
+                alt="Carousel product"/>
+            </Link>
+          </SwiperSlide>
         ))}
         </Swiper>
     </div>
