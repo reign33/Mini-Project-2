@@ -9,7 +9,7 @@ function SideBarPage() {
   
     <Sidebar className='bg-amazonclone'>
       <div className='pl-[60px] pt-[30px] h-[100px] bg-amazonclone'>
-        <img src="public/amazon_logo.png" alt="amazon logo" className='w-[110px]'/>
+        <img src="/amazon_logo.png" alt="amazon logo" className='w-[110px]'/>
       </div>
       <Menu
         rootStyles={{
