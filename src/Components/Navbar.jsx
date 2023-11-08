@@ -1,31 +1,30 @@
 import {ShoppingCartIcon, MapPinIcon} from "@heroicons/react/24/outline";
-
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import Search from "./Search";
 
 function Navbar() {
     const navigate=useNavigate();
-    
     function goToLogIn(){
-        navigate('/login')
+        navigate('/admin/login')
     }
     function goToSignUp(){
-        navigate('/signup')
+        navigate('/admin/signup')
     }
     function goToHomePage(){
         navigate('/')
     }
     const Logout = () => {
-      navigate('/login')
+      navigate('/admin/login')
     }
-
 
   return (
     <header className='min-w-[1000px]'>
         <div className='flex bg-amazonclone text-white h-[60px]'> 
             <div className='flex items-center m-4'>
-                <img className='h-[30px] m-2' src="/amazon_logo.png" onClick={goToHomePage}/>
+                <div className='border_color pr-4 pl-1'>
+                    <img className='h-[30px] m-2' src="/amazon_logo.png" onClick={goToHomePage}/>
+                </div>
                 <button className='pl-4'>
                     <MapPinIcon className="h-[20px]"/>
                 </button> 

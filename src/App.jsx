@@ -1,35 +1,36 @@
-import React, { useState } from "react"
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.css"
-import {HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage} from "./Components";
-
-
+import React, { useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import "./index.css";
+import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, Navbar, Footer } from "./Components";
 
 function App() {
-
   return (
     <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith("/admin");
+
+  return (
+    <>
+      {!isAdminRoute && <Navbar />}
       <Routes>
-        <Navbar /> 
         <Route exact path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/sidebar" element={<SideBarPage />} />
-        <Footer />
+                {/* Admin routes */}
+        <Route path="/admin/login" element={<LoginPage />} />
+        <Route path="/admin/signup" element={<SignUpPage />} />
+        <Route path="/admin/dashboard" element={<SideBarPage />} />
       </Routes>
-<<<<<<< HEAD
-      <Routes>
-        
-        <Route path="/sidebar" element={<SideBarPage />} />
-      </Routes>
-      
-=======
->>>>>>> cde03f41529b70fe5a9a104120e686c49ea62685
-    </BrowserRouter>
-  )
+      {!isAdminRoute && <Footer />}
+    </>
+  );
 }
 
-export default App
+export default App;

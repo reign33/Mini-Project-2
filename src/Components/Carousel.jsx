@@ -1,12 +1,9 @@
 import {Navigation, Autoplay} from 'swiper/modules';
-
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Navigation, Autoplay } from "swiper"
 
 import "swiper/css";
 import "swiper/css/navigation";
-import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 
 function Carousel() {
@@ -37,11 +34,8 @@ function Carousel() {
                     </SwiperSlide>
                 </Swiper>
             <div className='h-[50%] bg-gradient-to-b from-stone-900'/>
-            </div>
-
-    
-  )
-                   
+        </div>
+  )         
 }
 
 export default Carousel
