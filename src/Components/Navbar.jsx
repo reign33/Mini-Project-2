@@ -6,6 +6,7 @@ import Search from "./Search";
 
 function Navbar() {
     const navigate=useNavigate();
+    
     function goToLogIn(){
         navigate('/login')
     }
