@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
 import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, Navbar, Footer } from "./Components";
