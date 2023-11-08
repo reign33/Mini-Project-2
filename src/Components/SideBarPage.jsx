@@ -15,7 +15,7 @@ function SideBarPage() {
       <Menu
         rootStyles={{
           [`.${menuClasses.icon}`]: {
-            backgroundColor: 'black',
+            backgroundColor: 'bg-amazonclone',
             color: 'white',
           },
           backgroundColor:"black",
@@ -24,8 +24,9 @@ function SideBarPage() {
           
         }}
       >
-        <MenuItem active icon={<AiFillHome/>} className='hover:text-black'>Dashboard</MenuItem>
+        <MenuItem active icon={<AiFillHome/>} className='bg-amazonclone'>Dashboard</MenuItem>
         <SubMenu label="Category" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
+<<<<<<< HEAD
           <MenuItem component={<Link to="addcategory"/>} icon={<AiOutlinePlusSquare/>} className='bg-black text-white hover:text-black'> Add Category</MenuItem>
           <MenuItem icon={<AiOutlineInbox/>} className='bg-black text-white hover:text-black' > All Category</MenuItem>
           <MenuItem icon={<FaChartBar/>} className='bg-black text-white hover:text-black' > Reports</MenuItem>
@@ -39,6 +40,20 @@ function SideBarPage() {
           Orders
         </MenuItem>
       </Menu>
+=======
+          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white bg-amazonclone'> Add Category</MenuItem>
+          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white bg-amazonclone' > All Category</MenuItem>
+          <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-whitebg-amazonclone' > Reports</MenuItem>
+        </SubMenu>
+        <MenuItem active icon={<AiOutlineShop/>} className='my-[10px]bg-amazonclone'>
+          Products
+        </MenuItem>
+        <MenuItem active icon={<AiOutlineShoppingCart/>} className='mt-[10px]bg-amazonclone'>
+          Orders
+        </MenuItem>
+      </Menu>
+      <div className='bg-amazonclone h-[40vh]'></div>
+>>>>>>> c0db5ae50e1fe4f6559c381dbd0e239a61b200f8
     </Sidebar>
   </div>
   )
