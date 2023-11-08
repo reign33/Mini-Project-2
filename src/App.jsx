@@ -1,8 +1,6 @@
 import React, { useState } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css"
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import {HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage} from "./Components";
 
 
@@ -22,11 +20,14 @@ function App() {
         <Route path="/sidebar" element={<SideBarPage />} />
         <Footer />
       </Routes>
+<<<<<<< HEAD
       <Routes>
         
         <Route path="/sidebar" element={<SideBarPage />} />
       </Routes>
       
+=======
+>>>>>>> cde03f41529b70fe5a9a104120e686c49ea62685
     </BrowserRouter>
   )
 }

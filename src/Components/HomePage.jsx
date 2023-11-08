@@ -1,4 +1,4 @@
-import { Carousel, HomePageCard, CarouselCategory, CarouselProduct, Navbar, Footer } from "./";
+import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
 
 function HomePage() {
   return (
