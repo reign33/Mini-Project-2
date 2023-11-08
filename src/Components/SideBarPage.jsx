@@ -4,8 +4,16 @@ import { AiFillHome, AiFillAppstore, AiOutlinePlusSquare, AiOutlineInbox, AiOutl
 import {FaChartBar} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+
 function SideBarPage() {
   return (
+    <div>
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+      <div className="row-span-1 bg-amazonclone">01</div>
+      <div class="col-span-2 ...">02</div>
+      <div class="row-span-2 col-span-2 ...">03</div>
+    </div>
+
     <div style={{ display: 'flex', height: '100vh'}}>
   
     <Sidebar backgroundColor="black">
@@ -41,7 +49,8 @@ function SideBarPage() {
       </Menu>
     </Sidebar>
   </div>
+  </div>
   )
 }
 
-export default SideBarPage;
+export default SideBarPage

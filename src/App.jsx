@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css"
 import {HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, SidebarAddCategory, Navbar, Footer} from "./Components";
 
+
 function App() {
 
   return (
