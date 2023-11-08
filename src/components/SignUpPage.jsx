@@ -5,8 +5,11 @@ import {useForm} from 'react-hook-form';
 function SignUpPage() {
   const navigate=useNavigate();
   function handleBackToLogin(){
-    navigate('/login')
+    navigate('/admin/login')
   }
+  function goToHomePage(){
+    navigate('/')
+}
 
   const {
     register,
@@ -19,7 +22,7 @@ function SignUpPage() {
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">
         <div class="logo w-32 block m-auto">
-            <img class="m-3" src="/amazon-logo-transparent.png" alt="amazon logo"/>
+            <img class="m-3" src="/amazon-logo-transparent.png" onClick={goToHomePage} alt="amazon logo"/>
         </div>
         {/* <!-- logo end --> */}
 

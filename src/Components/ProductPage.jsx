@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { ProductDetails, Navbar, Footer } from "./";
+import { ProductDetails} from "./";
 import { GB_CURRENCY } from '../utilities/constants';
 import { callAPI } from "../utilities/CallApi";
 
@@ -22,9 +22,7 @@ function ProductPage() {
   if (!product?.title) return <h1>Loading Product ...</h1>;
 
   return (
-  <>
-    <Navbar/>
-    product &&
+    product && (
     <div className='h-screen bg-amazonclone-background'>
       <div className='min-w-[1000px] max-w-[1500px] m-auto p-4'>
         <div className='grid grid-cols-10 gap-2'>
@@ -53,12 +51,12 @@ function ProductPage() {
                   </select>
               </div>
               <button className='bg-yellow-400 w-full p-3 text-xs xl:text-sm rounded hover:bg-yellow-500 mt-3'>Add to Cart</button>
-            </div>
+              </div>
+          </div>
         </div>
       </div>
-    </div>
-    <Footer />
-  </>)
-}
+    )
+  );
+};
 
 export default ProductPage

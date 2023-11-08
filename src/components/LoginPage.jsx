@@ -21,14 +21,17 @@ export default function LogInForm() {
 
     const navigate = useNavigate();
     function handleBackToSignUp(){
-        navigate('/signup')
+        navigate('/admin/signup')
+    }
+    function goToHomePage(){
+        navigate('/')
     }
 
   return (
     <div class="m-0 p-0 box-border">
     <div class="container w-1/2 m-auto">
         <div class="logo w-32 block m-auto">
-            <img class="m-3" src="/images.png" alt="Amazon Logo" srcSet="" />
+            <img class="m-3" src="/amazon-logo-transparent.png" onClick={goToHomePage} alt="Amazon Logo" srcSet="" />
         </div>
         {/* <!-- logo end --> */}
         <div class="loginform w-1/2 m-auto border-[2px] rounded-lg border-gray-200 p-[20px]">
