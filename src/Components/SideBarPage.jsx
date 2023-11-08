@@ -4,8 +4,15 @@ import { AiFillHome, AiFillAppstore, AiOutlinePlusSquare, AiOutlineInbox, AiOutl
 import {FaChartBar} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
+
 function SideBarPage() {
   return (
+    <div class="grid grid-rows-3 grid-flow-col gap-4">
+      <div className="row-span-1 bg-amazonclone">01</div>
+      <div class="col-span-2 ...">02</div>
+      <div class="row-span-2 col-span-2 ...">03</div>
+    </div>
+
     <div style={{ display: 'flex', height: '100vh'}}>
   
     <Sidebar backgroundColor="black">
@@ -26,7 +33,6 @@ function SideBarPage() {
       >
         <MenuItem active icon={<AiFillHome/>} className='bg-amazonclone'>Dashboard</MenuItem>
         <SubMenu label="Category" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
-<<<<<<< HEAD
           <MenuItem component={<Link to="addcategory"/>} icon={<AiOutlinePlusSquare/>} className='bg-black text-white hover:text-black'> Add Category</MenuItem>
           <MenuItem icon={<AiOutlineInbox/>} className='bg-black text-white hover:text-black' > All Category</MenuItem>
           <MenuItem icon={<FaChartBar/>} className='bg-black text-white hover:text-black' > Reports</MenuItem>
@@ -40,23 +46,9 @@ function SideBarPage() {
           Orders
         </MenuItem>
       </Menu>
-=======
-          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white bg-amazonclone'> Add Category</MenuItem>
-          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white bg-amazonclone' > All Category</MenuItem>
-          <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-whitebg-amazonclone' > Reports</MenuItem>
-        </SubMenu>
-        <MenuItem active icon={<AiOutlineShop/>} className='my-[10px]bg-amazonclone'>
-          Products
-        </MenuItem>
-        <MenuItem active icon={<AiOutlineShoppingCart/>} className='mt-[10px]bg-amazonclone'>
-          Orders
-        </MenuItem>
-      </Menu>
-      <div className='bg-amazonclone h-[40vh]'></div>
->>>>>>> c0db5ae50e1fe4f6559c381dbd0e239a61b200f8
     </Sidebar>
   </div>
   )
 }
 
-export default SideBarPage;
+export default SideBarPage
