@@ -1,8 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css"
-import {HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage} from "./Components";
-
+import {HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, SidebarAddCategory} from "./Components";
 
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
       <Routes>
         <Navbar /> 
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchResults />} />
+        <Route path="/search" element={<SearchResults/>} />
         <Route path="/product/:id" element={<ProductPage />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/login" element={<LoginPage />} />
@@ -20,14 +19,6 @@ function App() {
         <Route path="/sidebar" element={<SideBarPage />} />
         <Footer />
       </Routes>
-<<<<<<< HEAD
-      <Routes>
-        
-        <Route path="/sidebar" element={<SideBarPage />} />
-      </Routes>
-      
-=======
->>>>>>> cde03f41529b70fe5a9a104120e686c49ea62685
     </BrowserRouter>
   )
 }

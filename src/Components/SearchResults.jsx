@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { ProductDetails } from "./";
 import { callAPI } from "../utilities/CallApi";
 import { GB_CURRENCY } from "../utilities/constants";
-import Navbar from "./Navbar";
-import Footer from "./Footer"
+import {Navbar, Footer} from "./";
 
 function SearchResults() {
   const [searchParams] = useSearchParams();
