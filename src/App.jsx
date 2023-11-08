@@ -11,8 +11,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar />
       <Routes>
+        <Navbar /> 
         <Route exact path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/product/:id" element={<ProductPage />} />
@@ -20,8 +20,13 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/sidebar" element={<SideBarPage />} />
+        <Footer />
       </Routes>
-      <Footer />
+      <Routes>
+        
+        <Route path="/sidebar" element={<SideBarPage />} />
+      </Routes>
+      
     </BrowserRouter>
   )
 }
