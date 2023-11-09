@@ -14,7 +14,7 @@ function Search() {
       e.preventDefault();
   
       navigate({
-        pathname: "search",
+        pathname: "/search",
         search: `${createSearchParams({
           category: `${category}`,
           searchTerm: `${searchTerm}`,
