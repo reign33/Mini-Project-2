@@ -1,55 +1,47 @@
-import React, { useState } from "react";
-import { FaHome, FaBox, FaUsers, FaCaretDown } from "react-icons/fa";
+import React from 'react'
+import { Sidebar, Menu, MenuItem, SubMenu, menuClasses } from 'react-pro-sidebar';
+import { AiFillHome, AiFillAppstore, AiOutlinePlusSquare, AiOutlineInbox, AiOutlineShoppingCart, AiOutlineShop } from "react-icons/ai";
+import {FaChartBar} from "react-icons/fa";
 
 function SideBarPage() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-  
   return (
-    <div>
-          <div className="bg-gray-800 w-1/4 min-h-screen text-white">
-            <div className="p-4 text-xl font-bold">
-              Dashboard
-            </div>
-            <ul className="py-4">
-              <li className="p-2 hover:bg-gray-700 cursor-pointer">
-                <FaHome className="inline-block mr-2" />
-                Home
-              </li>
-              <li className="p-2 hover:bg-gray-700 cursor-pointer">
-                <FaBox className="inline-block mr-2" />
-                Products
-              </li>
-              <li
-                className={`p-2 cursor-pointer ${
-                  isDropdownOpen ? "bg-gray-700" : ""
-                }`}
-                onClick={toggleDropdown}
-              >
-                <div className="flex items-center">
-                  <FaUsers className="inline-block mr-2" />
-                  Users
-                  <FaCaretDown
-                    className={`ml-auto transform ${
-                      isDropdownOpen ? "rotate-180" : "rotate-0"
-                    }`}
-                  />
-                </div>
-                {isDropdownOpen && (
-                  <ul className="pl-4">
-                    <li className="p-2 hover:bg-gray-700 cursor-pointer">User 1</li>
-                    <li className="p-2 hover-bg-gray-700 cursor-pointer">User 2</li>
-                  </ul>
-                )}
-              </li>
-            </ul>
-          </div>
-    </div>
- 
+    <div style={{ display: 'flex', height: '100vh'}}>
+  
+    <Sidebar backgroundColor='#131921'>
+      <div className='pl-[60px] pt-[30px] h-[100px] bg-amazonclone'>
+        <img src="/amazon_logo.png" alt="amazon logo" className='w-[110px]'/>
+      </div>
+      <Menu
+        rootStyles={{
+          [`.${menuClasses.icon}`]: {
+            backgroundColor: '#131921',
+            color: 'white',
+          },
+          backgroundColor:"#131921",
+          color: "white",
+          borderTop: "0.5px solid white"
+          
+        }}
+      >
+        <MenuItem active icon={<AiFillHome/>} className='hover:text-black'>Dashboard</MenuItem>
+        <SubMenu label="Category" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
+          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Category</MenuItem>
+          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Category</MenuItem>
+          <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
+        </SubMenu>
+        <SubMenu label="Products" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
+          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Product</MenuItem>
+          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Products</MenuItem>
+          <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
+        </SubMenu>
+        <MenuItem active icon={<AiOutlineShoppingCart/>} className='mt-[10px] hover:text-black'>
+          Orders
+        </MenuItem>
+      </Menu>
+    </Sidebar>
+    
+  </div>
   )
 }
 
-export default SideBarPage
+export default SideBarPage;
