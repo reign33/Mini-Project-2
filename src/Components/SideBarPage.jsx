@@ -10,7 +10,7 @@ function SideBarPage() {
   
   return (
     <div>
-          <div className="bg-gray-800 w-1/4 min-h-screen text-white">
+          <div className="bg-gray-800 w-80 min-h-screen text-white p-9">
             <div className="p-4 text-xl font-bold">
               Dashboard
             </div>
