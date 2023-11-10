@@ -2,6 +2,7 @@ import React from 'react'
 import { Sidebar, Menu, MenuItem, SubMenu, menuClasses } from 'react-pro-sidebar';
 import { AiFillHome, AiFillAppstore, AiOutlinePlusSquare, AiOutlineInbox, AiOutlineShoppingCart, AiOutlineShop } from "react-icons/ai";
 import {FaChartBar} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function SideBarPage() {
   return (
@@ -23,9 +24,9 @@ function SideBarPage() {
           
         }}
       >
-        <MenuItem active icon={<AiFillHome/>} className='hover:text-black'>Dashboard</MenuItem>
-        <SubMenu label="Category" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
-          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Category</MenuItem>
+        <MenuItem component={<Link to="/admin/dashboard"/>} active icon={<AiFillHome/>} className='hover:text-black'>Dashboard</MenuItem>
+        <SubMenu label="Category" icon={<AiFillAppstore/>} className='my-[10px] hover:amazonclone-yello'>
+          <MenuItem component={<Link to="/admin/addcategory"/>} icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Category</MenuItem>
           <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Category</MenuItem>
           <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
         </SubMenu>

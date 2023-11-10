@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
-import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, Navbar, Footer } from "./Components";
+import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Admin, Navbar, Footer, AddCategory } from "./components";
 
 function App() {
   return (
@@ -25,7 +25,8 @@ function AppContent() {
                 {/* Admin routes */}
         <Route path="/admin/login" element={<LoginPage />} />
         <Route path="/admin/signup" element={<SignUpPage />} />
-        <Route path="/admin/dashboard" element={<SideBarPage />} />
+        <Route path="/admin/dashboard" element={<Admin />} />
+        <Route path="/admin/addcategory" element={<AddCategory />} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
