@@ -16,3 +16,6 @@ export { default as Navbar } from "./Navbar";
 export { default as Search } from "./Search";
 export { default as Footer } from "./Footer";
 export { default as SidebarAddCategory } from "./SidebarAddCategory";
+export { default as SidebarAllCategory } from "./SidebarAllCategory";
+export { default as SidebarDashboard } from "./SidebarDashboard";
+export { default as SidebarReportCat } from "./SidebarReportCat";
