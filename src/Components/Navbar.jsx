@@ -23,12 +23,12 @@ function Navbar() {
         <div className='flex bg-amazonclone text-white h-[60px]'> 
             <div className='flex items-center m-4'>
                 <div className='border_color pr-4 pl-1'>
-                    <img className='h-[30px] m-2' src="/amazon_logo.png" onClick={goToHomePage}/>
+                    <img className='h-[30px] m-2 cursor-pointer' src="/amazon_logo.png" onClick={goToHomePage}/>
                 </div>
                 <button className='pl-4'>
                     <MapPinIcon className="h-[20px]"/>
                 </button> 
-                <div className='pr-4 pl-1'>   
+                <div className='border_color pr-4 pl-1 cursor-pointer'>   
                     <div className='text-xs xl:text-sm'>Deliver to</div>
                     <div className='text-sm xl:text-base font-bold'>Philippines</div>
                 </div>
@@ -37,8 +37,9 @@ function Navbar() {
                 <Search/>
             </div>
             <div className='flex items-center m-4'>
+                {/* dropdown menu*/}
                 <div className="dropdown relative inline-block">
-                    <div className='border_color px-4'>
+                    <div className='border_color px-4 cursor-pointer'>
                         <div className='text-xs xl:text-sm'>Hello, sign in</div>
                         <div className='text-sm xl:text-base font-bold'>Accounts & Lists</div>
                     </div>
@@ -71,12 +72,12 @@ function Navbar() {
                 </div>
 
 
-                <div className='border_color pr-4 pl-4'>
+                <div className='border_color pr-4 pl-4 cursor-pointer'>
                     <div className='text-xs xl:text-sm'>Returns</div>
                     <div className='text-sm xl:text-base font-bold'>& Orders</div>
                 </div>
                 <Link to={"/checkout"}>
-                    <div className='flex pr-3 pl-3'>
+                    <div className='border_color flex pr-3 pl-3 cursor-pointer'>
                         <ShoppingCartIcon className="h-[48px]"/>
                         <div className="mt-7 text-xs xl:text-sm font-bold">
                             Cart
