@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
+
 import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, SideBarPage, Navbar, Footer, SidebarAddCategory, SidebarAllCategory,
 SidebarDashboard, SidebarReportCat } from "./Components";
 
@@ -31,6 +32,7 @@ function AppContent() {
         <Route path="/admin/dashboard/addcategory" element={<SidebarAddCategory/>} />
         <Route path="/admin/dashboard/allcategory" element={<SidebarAllCategory/>} />
         <Route path="/admin/dashboard/reportcategory" element={<SidebarReportCat/>} />
+
 
       </Routes>
       {!isAdminRoute && <Footer />}
