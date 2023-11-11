@@ -32,14 +32,14 @@ function SideBarPage() {
       >
         <MenuItem component={<Link to="/admin/dashboard"/>} active icon={<AiFillHome/>} className='menus hover:text-black'>Dashboard</MenuItem>
         <SubMenu label="Category" icon={<AiFillAppstore/>} className='menus my-[10px] hover:text-[red]'>
-          <MenuItem component={<Link to="/admin/dashboard/addcategory"/>} icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Category</MenuItem>
-          <MenuItem component={<Link to="/admin/dashboard/allcategory"/>} icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Category</MenuItem>
-          <MenuItem component={<Link to="/admin/dashboard/reportcategory"/>} icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
+          <MenuItem component={<Link to="/admin/dashboard/addcategory"/>} icon={<AiOutlinePlusSquare/>} className='bg-[#232F3A] text-white hover:text-black'> Add Category</MenuItem>
+          <MenuItem component={<Link to="/admin/dashboard/allcategory"/>} icon={<AiOutlineInbox/>} className='bg-[#232F3A] text-white hover:text-black' > All Category</MenuItem>
+          <MenuItem component={<Link to="/admin/dashboard/reportcategory"/>} icon={<FaChartBar/>} className='bg-[#232F3A] text-white hover:text-black' > Reports</MenuItem>
         </SubMenu>
         <SubMenu label="Products" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
-          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Product</MenuItem>
-          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Products</MenuItem>
-          <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
+          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-[#232F3A] text-white hover:text-black'> Add Product</MenuItem>
+          <MenuItem icon={<AiOutlineInbox/>} className='bg-[#232F3A] text-white hover:text-black' > All Products</MenuItem>
+          <MenuItem icon={<FaChartBar/>} className='bg-[#232F3A] text-white hover:text-black' > Reports</MenuItem>
         </SubMenu>
         <MenuItem active icon={<AiOutlineShoppingCart/>} className='mt-[10px] hover:text-black'>
           Orders
