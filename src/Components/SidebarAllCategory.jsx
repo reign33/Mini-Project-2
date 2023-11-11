@@ -5,9 +5,9 @@ import {BiSolidEdit} from "react-icons/bi";
 
 function SidebarAllCategory() {
   return (
+    
     <div className='flex'>
       <SideBarPage />
-
       <div className='flex flex-col items-center border w-[182vh]'>
         <div className='flex justify-between items-center w-[160vh] h-[15vh]'>
           <div>

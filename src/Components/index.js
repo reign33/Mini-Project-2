@@ -19,3 +19,5 @@ export { default as SidebarAddCategory } from "./SidebarAddCategory";
 export { default as SidebarAllCategory } from "./SidebarAllCategory";
 export { default as SidebarDashboard } from "./SidebarDashboard";
 export { default as SidebarReportCat } from "./SidebarReportCat";
+export { default as AddProducts } from "./AddProducts";
+export { default as AllProducts } from "./AllProducts";
