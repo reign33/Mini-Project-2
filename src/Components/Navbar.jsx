@@ -1,9 +1,11 @@
 import {ShoppingCartIcon, MapPinIcon} from "@heroicons/react/24/outline";
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import Search from "./Search";
 
 function Navbar() {
+    const cart = useSelector((state) => state.cart.productsNumber);
     const navigate=useNavigate();
     function goToLogIn(){
         navigate('/admin/login')
@@ -79,6 +81,11 @@ function Navbar() {
                 <Link to={"/checkout"}>
                     <div className='border_color flex pr-3 pl-3 cursor-pointer'>
                         <ShoppingCartIcon className="h-[48px]"/>
+                        <div className="relative">
+                            <div className="absolute right-[9px] font-bold m-2 text-orange-400">
+                                {cart}
+                            </div>
+                        </div>
                         <div className="mt-7 text-xs xl:text-sm font-bold">
                             Cart
                         </div>

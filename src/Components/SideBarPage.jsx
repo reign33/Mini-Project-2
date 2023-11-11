@@ -37,8 +37,8 @@ function SideBarPage() {
           <MenuItem component={<Link to="/admin/dashboard/reportcategory"/>} icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
         </SubMenu>
         <SubMenu label="Products" icon={<AiFillAppstore/>} className='my-[10px] hover:text-[red]'>
-          <MenuItem icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Product</MenuItem>
-          <MenuItem icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Products</MenuItem>
+          <MenuItem component={<Link to="/admin/dashboard/addproducts"/>} icon={<AiOutlinePlusSquare/>} className='bg-amazonclone text-white hover:text-black'> Add Product</MenuItem>
+          <MenuItem component={<Link to="/admin/dashboard/allproducts"/>} icon={<AiOutlineInbox/>} className='bg-amazonclone text-white hover:text-black' > All Products</MenuItem>
           <MenuItem icon={<FaChartBar/>} className='bg-amazonclone text-white hover:text-black' > Reports</MenuItem>
         </SubMenu>
         <MenuItem active icon={<AiOutlineShoppingCart/>} className='mt-[10px] hover:text-black'>
