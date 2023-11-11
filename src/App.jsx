@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
 
 import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Navbar, Footer, SidebarAddCategory, SidebarAllCategory,
-SidebarDashboard, SidebarReportCat, AllProducts, AddProducts } from "./components";
+SidebarDashboard, SidebarReportCat } from "./components";
 
 
 function App() {
@@ -32,10 +32,6 @@ function AppContent() {
         <Route path="/admin/dashboard/addcategory" element={<SidebarAddCategory/>} />
         <Route path="/admin/dashboard/allcategory" element={<SidebarAllCategory/>} />
         <Route path="/admin/dashboard/reportcategory" element={<SidebarReportCat/>} />
-        <Route path="/admin/dashboard/addproducts" element={<AddProducts/>} />
-        <Route path="/admin/dashboard/allproducts" element={<AllProducts/>} />
-
-
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
