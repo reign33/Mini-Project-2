@@ -1,9 +1,11 @@
 import React from 'react'
-import SideBarPage from './SideBarPage'
+import SideBarPage from './SideBarPage';
 import {FaSistrix, FaTrashAlt} from "react-icons/fa"
 import {BiSolidEdit} from "react-icons/bi";
+import { Link } from 'react-router-dom';
 
-function SidebarAllCategory() {
+function AllCategory() {
+
   return (
     
     <div className='flex'>
@@ -18,7 +20,9 @@ function SidebarAllCategory() {
             <p className='text-[14px] text-[gray] font-bold py-[10px]'>Total 7 Categories</p>
           </div>
           <div>
-            <button className='border border-[#EC6E45] bg-[#FF9900] text-white text-[14px] font-medium rounded-lg px-[10px] py-[3px] active:bg-[#EC6E45]' type="button"> Add New Category + </button>
+          <Link to="/admin/addcategory">
+            <button className='border border-[#EC6E45] bg-[#FF9900] text-white text-[14px] font-medium rounded-lg px-[10px] py-[3px] active:bg-[#EC6E45]' type='button'> Add New Category + </button>
+            </Link>
             <p className='text-[14px] text-[gray] font-bold py-[10px] text-right'>Rows per page 5</p>
           </div>
         </div>
@@ -93,4 +97,4 @@ function SidebarAllCategory() {
   )
 }
 
-export default SidebarAllCategory
+export default AllCategory

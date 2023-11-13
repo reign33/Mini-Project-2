@@ -1,8 +1,14 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
-
-import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Navbar, Footer, SidebarAddCategory, SidebarAllCategory,
-SidebarDashboard, SidebarReportCat } from "./components";
+import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Navbar, Footer} from "./components";
+import Dashboard from "./admin/Dashboard";
+import AllCategory from "./admin/AllCategory";
+import AddCategory from "./admin/AddCategory";
+import ReportCategory from "./admin/ReportCategory";
+import AddProduct from "./admin/AddProduct";
+import AllProduct from "./admin/AllProduct";
+import ReportProduct from "./admin/ReportProduct";
+import Order from "./admin/Order";
 
 
 function App() {
@@ -28,10 +34,14 @@ function AppContent() {
                 {/* Admin routes */}
         <Route path="/admin/login" element={<LoginPage />} />
         <Route path="/admin/signup" element={<SignUpPage />} />
-        <Route path="/admin/dashboard" element={<SidebarDashboard/>}/>
-        <Route path="/admin/dashboard/addcategory" element={<SidebarAddCategory/>} />
-        <Route path="/admin/dashboard/allcategory" element={<SidebarAllCategory/>} />
-        <Route path="/admin/dashboard/reportcategory" element={<SidebarReportCat/>} />
+        <Route path="/admin/dashboard" element={<Dashboard/>}/>
+        <Route path="/admin/addcategory" element={<AddCategory/>} />
+        <Route path="/admin/allcategory" element={<AllCategory/>} />
+        <Route path="/admin/reportcategory" element={<ReportCategory/>} />
+        <Route path="/admin/addproduct" element={<AddProduct/>} />
+        <Route path="/admin/allproduct" element={<AllProduct/>} />
+        <Route path="/admin/reportproduct" element={<ReportProduct/>} />
+        <Route path="/admin/order" element={<Order/>} />
       </Routes>
       {!isAdminRoute && <Footer />}
     </>

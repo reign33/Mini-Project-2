@@ -1,14 +1,16 @@
 import React from 'react'
 import SideBarPage from './SideBarPage'
 
-export default function SidebarDashboard() {
+function ReportCategory() {
   return (
     <div className='flex'>
     <SideBarPage />
   <div className="w-[100%] border">
-    <div className='w-[300px] text-center border'>Dashboard</div>
+    <div className='w-[300px] text-center font-bold border'>Report Category</div>
   </div>
   </div>
   
   )
 }
+
+export default ReportCategory
