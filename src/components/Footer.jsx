@@ -96,9 +96,9 @@ const Footer = () => {
                     </div>
                 </div>
             <p className='footerx'>Conditions of Use & Sale &nbsp; &nbsp;&nbsp;  Privacy Notice  &nbsp; &nbsp;&nbsp; Interest-Based Ads  &nbsp; &nbsp;&nbsp;  © 1996-{year}, Amazon.com, Inc. or its affiliates</p>
-            <p>Amazon Clone Project e-Commerce Created By Lar Conception & Ron Cley Fulgado</p>
+            <p>Amazon Clone Project e-Commerce Created By Larry Concepcion & Ron Cley Fulgado</p>
             <p>Guided By Sir.John Michael Baldonado Kodego Instructor</p>
-            <p>Codego Runners -WD88P August 2023 Batch</p>
+            <p>Kodego Runners -WD88P August 2023 Batch</p>
             </div>
         </footer>
     )
