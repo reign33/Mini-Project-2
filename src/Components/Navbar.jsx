@@ -3,7 +3,7 @@ import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Search from "./Search";
-import { Sidebar, Menu, MenuItem} from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, SubMenu} from 'react-pro-sidebar';
 import { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserCircle } from "react-icons/fa";
@@ -56,7 +56,7 @@ function Navbar() {
                         <div className='text-sm xl:text-base font-bold'>Accounts & Lists</div>
                     </div>
                         {/* dropdown content */}
-                        <div className="dropdown_content hidden absolute bg-white shadow-sm z-10 h-[40vh] w-[330px] rounded-lg">
+                        <div className="dropdown_content hidden absolute bg-white shadow-2xl shadow-black z-10 h-[40vh] w-[330px] rounded-lg">
                             <div className="sign_in text-center p-[15px] mx-[15px] text-black text-[13px]">
                                 <button className="w-[250px] bg-amazonclone-yellow rounded text-[13px] text-black active:bg-[#c59456] py-[5px]" onClick={goToLogIn}>Sign In</button>
                                 <p>New customer? <a className="text-[#0066c0] cursor-pointer hover:underline hover:text-red-700 font-medium text-[13px]"
@@ -104,33 +104,62 @@ function Navbar() {
 
             </div>
         </div>
+
+        {/* Burger All */}
         <div className="flex bg-amazonclone-light_blue text-white text-xs xl:text-sm pl-6">
             <div onClick={()=> setToggled(!toggled)} className='flex border_color1'>
-            <GiHamburgerMenu className="mt-[3px] mr-[5px]" />All</div>
-            <div className='border_color1'>Today's Deals</div>
-            <div className='border_color1'> Buy Again</div>
-            <div className='border_color1'> Customer Service</div>
-            <div className='border_color1'>Registry</div>
-            <div className='border_color1'>Gift Cards</div>
-            <div className='border_color1'>Sell</div>
+            <GiHamburgerMenu className="mt-[3px] mr-[5px] cursor-pointer" />All</div>
+            <div className='border_color1 cursor-pointer'>Today's Deals</div>
+            <div className='border_color1 cursor-pointer'> Buy Again</div>
+            <div className='border_color1 cursor-pointer'> Customer Service</div>
+            <div className='border_color1 cursor-pointer'>Registry</div>
+            <div className='border_color1 cursor-pointer'>Gift Cards</div>
+            <div className='border_color1 cursor-pointer'>Sell</div>
         </div>
-        
-        <Sidebar backgroundColor="white" className="text-[14px] " onBackdropClick={() => setToggled(false)} toggled={toggled} breakPoint="always">
-            <div className="flex bg-amazonclone-light_blue text-center font-bold text-white p-[10px]">
-                <FaUserCircle className="text-[25px] mr-[10px]"/> HELLO, USER</div>
-            <div className="font-bold ml-[20px] my-[15px]">DIGITAL CONTENT AND DEVICES</div>
+        <Sidebar backgroundColor="white" width="40vh" className="text-[14px] shadow-2xl shadow-black" onBackdropClick={() => setToggled(false)} toggled={toggled} breakPoint="always">
+            
+            <div className="flex w-[40vh] h-[8vh] bg-amazonclone-light_blue text-center font-bold text-white items-center fixed z-10">
+                <FaUserCircle className="text-[28px] mr-[10px] ml-[20px]"/> HELLO, USER</div>
+            <div className="font-bold ml-[20px] mb-[15px] mt-[10vh]">Digital Content & Devices</div>
+            
             <Menu className="border-b-[1px] border-[gray]">
-                <MenuItem> Amazon Music</MenuItem>
-                <MenuItem> Kindle e-readers & Books</MenuItem>
-                <MenuItem> Amazon Appstore</MenuItem>
+                <MenuItem > Amazon Music</MenuItem>
+                <MenuItem > Kindle e-readers & Books</MenuItem>
+                <MenuItem > Amazon Appstore</MenuItem>
             </Menu>
-            <div className="font-bold ml-[17px] my-[15px]">SHOP BY DEPARTMENT</div>
+            <div className="font-bold ml-[17px] my-[15px]">Shop By Department</div>
             <Menu className="border-b-[1px] border-[gray]">
                 <MenuItem> Electronics</MenuItem>
                 <MenuItem> Computers</MenuItem>
                 <MenuItem> Smart Home</MenuItem>
                 <MenuItem> Arts & Crafts</MenuItem>
-                <MenuItem> See All</MenuItem>
+                <SubMenu label="See All">
+                    <MenuItem>Automotive</MenuItem>
+                    <MenuItem>Baby</MenuItem>
+                    <MenuItem>Beauty and personal care</MenuItem>
+                    <MenuItem>Womens Fasion</MenuItem>
+                    <MenuItem>Mens Fasion</MenuItem>
+                    <MenuItem>Health and Household</MenuItem>
+                    <MenuItem>Home and Kitchen</MenuItem>
+                </SubMenu>
+            </Menu>
+            <div className="font-bold ml-[17px] my-[15px]">Programs & Features</div>
+            <Menu className="border-b-[1px] border-[gray]">
+                <MenuItem> Gift Cards</MenuItem>
+                <MenuItem> Shop By Interest</MenuItem>
+                <MenuItem> Amazon Live</MenuItem>
+                <MenuItem> International Shopping</MenuItem>
+                <SubMenu label="See All">
+                    <MenuItem>Amazon Second Chance</MenuItem>
+                </SubMenu>
+            </Menu>
+            <div className="font-bold ml-[17px] my-[15px]">Help & Settings</div>
+            <Menu className="border-b-[1px] border-[gray]">
+                <MenuItem> Your Account</MenuItem>
+                <MenuItem> English</MenuItem>
+                <MenuItem> United States</MenuItem>
+                <MenuItem> Customer Service</MenuItem>
+                <MenuItem onClick={Logout}> Sign Out</MenuItem>
             </Menu>
         </Sidebar>
 
