@@ -7,7 +7,7 @@ const Footer = () => {
     const year = new Date().getFullYear();
 
     return (
-        <footer className="custom-footer">
+        <footer className="custom-footer min-w-[1000px]">
             <div className='bg-[#EAEDED] text-center py-[10px] font-medium active:font-bold'><a href="#">Back to Top</a></div>
             <div className="footer_container">
                 <div className="footr_details_one">
