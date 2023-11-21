@@ -8,13 +8,19 @@ export default function LogInForm() {
         email: "admin@admin.com",
         password: "admin123"
       }
+    const useronly = {
+        email: "user@user.com",
+        password: "user123"
+    }
 
     const submitHandler = e => {
         e.preventDefault();
         console.log(details);
         if(details.email == adminUser.email && details.password == adminUser.password){
+            navigate('/admin/dashboard')
+        } else if(details.email == useronly.email && details.password == useronly.password) {
             navigate('/')
-        } else {
+        } else{
             setDetails({email:"", password:""});
         }
     }

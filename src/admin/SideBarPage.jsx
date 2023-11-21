@@ -3,19 +3,14 @@ import { Sidebar, Menu, MenuItem, SubMenu, menuClasses } from 'react-pro-sidebar
 import { AiFillHome, AiFillAppstore, AiOutlinePlusSquare, AiOutlineInbox, AiOutlineShoppingCart } from "react-icons/ai";
 import {FaChartBar} from "react-icons/fa";
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 
 function SideBarPage() {
- const navigate = useNavigate();
-  function backtomain(){
-    navigate('/')
-  }
   return (
 <div>
     <Sidebar backgroundColor='#131921' className='h-[100vh]' >
       <div className='pl-[60px] pt-[30px] h-[100px] bg-amazonclone'>
-        <img onClick={backtomain} src="/amazon_logo.png" alt="amazon logo" className='w-[110px] cursor-pointer'/>
+        <img src="/amazon_logo.png" alt="amazon logo" className='w-[110px]'/>
       </div>
       <Menu
         rootStyles={{
