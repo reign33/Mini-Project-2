@@ -15,8 +15,8 @@ export { default as Navbar } from "./Navbar";
 export { default as Search } from "./Search";
 export { default as Footer } from "./Footer";
 
-// export { default as SideBarPage } from "../admin/SideBarPage";
-// export { default as AllCategory } from "../admin/AllCategory";
-// export { default as AddCategory } from "../admin/AddCategory";
-// export { default as ReportCategory } from "../admin/ReportCategory";
-// export { default as Dashboard } from "../admin/Dashboard";
+export { default as SideBarPage } from "../admin/SideBarPage";
+export { default as AllCategory } from "../admin/AllCategory";
+export { default as AddCategory } from "../admin/AddCategory";
+export { default as ReportCategory } from "../admin/ReportCategory";
+export { default as Dashboard } from "../admin/Dashboard";
