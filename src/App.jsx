@@ -3,6 +3,7 @@ import "./index.css";
 import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Navbar, Footer} from "./components";
 import Dashboard from "./admin/Dashboard";
 import AllCategory from "./admin/AllCategory";
+import UpdateCategory from "./admin/UpdateCategory";
 import AddCategory from "./admin/AddCategory";
 import ReportCategory from "./admin/ReportCategory";
 import AddProduct from "./admin/AddProduct";
@@ -36,6 +37,7 @@ function AppContent() {
         <Route path="/admin/signup" element={<SignUpPage />} />
         <Route path="/admin/dashboard" element={<Dashboard/>}/>
         <Route path="/admin/addcategory" element={<AddCategory/>} />
+        <Route path="/admin/updatecategory/:id" element={<UpdateCategory/>} />
         <Route path="/admin/allcategory" element={<AllCategory/>} />
         <Route path="/admin/reportcategory" element={<ReportCategory/>} />
         <Route path="/admin/addproduct" element={<AddProduct/>} />
