@@ -1,0 +1,51 @@
+{
+  "category": [
+    {
+      "id": 1,
+      "name": "fashion",
+      "product": "0"
+    },
+    {
+      "name": "Heath",
+      "id": 3
+    },
+    {
+      "name": "Ron's Sportsware",
+      "id": 4
+    },
+    {
+      "name": "Motorcycle",
+      "id": 5
+    },
+    {
+      "name": "Books",
+      "id": 6
+    },
+    {
+      "name": "Planet's",
+      "id": 7
+    },
+    {
+      "name": "Ron's bikeparts",
+      "id": 9
+    },
+    {
+      "name": "Ron's Spaceships",
+      "id": 10
+    },
+    {
+      "name": "hello update",
+      "id": 11
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
