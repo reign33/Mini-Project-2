@@ -10,6 +10,7 @@ import AddProduct from "./admin/AddProduct";
 import AllProduct from "./admin/AllProduct";
 import ReportProduct from "./admin/ReportProduct";
 import Order from "./admin/Order";
+import CheckoutData from "./Components/CheckoutData";
 
 
 function App() {
@@ -27,11 +28,14 @@ function AppContent() {
   return (
     <>
       {!isAdminRoute && <Navbar />}
+
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchResults />} />
         <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/checkout" element={<Checkout />}/>
+        
+
                 {/* Admin routes */}
         <Route path="/admin/login" element={<LoginPage />} />
         <Route path="/admin/signup" element={<SignUpPage />} />
@@ -44,6 +48,7 @@ function AppContent() {
         <Route path="/admin/allproduct" element={<AllProduct/>} />
         <Route path="/admin/reportproduct" element={<ReportProduct/>} />
         <Route path="/admin/order" element={<Order/>} />
+        <Route path="/admin/checkoutdata" element={<CheckoutData/>}/>
       </Routes>
       {!isAdminRoute && <Footer />}
     </>
