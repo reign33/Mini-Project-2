@@ -7,22 +7,22 @@ function HomePage() {
                 <Carousel/>
                 <div className="grid grid-cols-3 xl:grid-cols-4 -mt-80">
                     <HomePageCard
-                        title={"We have a surprise for you"}
+                        title={"Deals in PCs"}
                         img={"/home_grid_1.jpg"}
                         link={"See terms and conditions"}
                         />
                     <HomePageCard
-                        title={"Watch The Rings of Power"}
+                        title={"FREE Shipping to Philippines"}
                         img={"/home_grid_2.jpg"}
                         link={"See terms and conditions"}
                         />
                     <HomePageCard
-                        title={"Unlimited Streaming"}
+                        title={"Beauty steals under $25"}
                         img={"/home_grid_3.jpg"}
                         link={"See terms and conditions"}
                         />
                     <HomePageCard
-                        title={"More titles to explore"}
+                        title={"Toys under $25"}
                         img={"/home_grid_4.jpg"}
                         link={"Browse Kindle Unlimited"}
                         />
