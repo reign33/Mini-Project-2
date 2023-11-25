@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
-Navigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import { USD_CURRENCY } from "../utilities/constants";
 import {
   removeFromCart,
