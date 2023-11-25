@@ -1,8 +1,8 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
-import { GB_CURRENCY } from "../utilities/constants";
-import { useNavigate } from "react-router-dom";
+Navigate } from "react-router-dom";
+import { USD_CURRENCY } from "../utilities/constants";
 import {
   removeFromCart,
   decrementInCart,
@@ -85,7 +85,7 @@ function Checkout() {
                     </div>
                     <div className="col-span-2">
                       <div className="text-lg xl:text-xl mt-2 mr-4 font-semibold">
-                        {GB_CURRENCY.format(product.price)}
+                        {USD_CURRENCY.format(product.price)}
                       </div>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ function Checkout() {
             <div className="text-lg xl:text-xl text-right mb-4 mr-4">
               Subtotal ({itemsNumber} items):{" "}
               <span className="font-semibold">
-                {GB_CURRENCY.format(subtotal)}
+                {USD_CURRENCY.format(subtotal)}
               </span>
             </div>
           </div>
@@ -108,7 +108,7 @@ function Checkout() {
             <div className="text-base xl:text-lg mb-4">
               Subtotal ({itemsNumber} items):{" "}
               <span className="font-semibold">
-                {GB_CURRENCY.format(subtotal)}
+                {USD_CURRENCY.format(subtotal)}
               </span>
             </div>
             <button onClick={gotocheckoutdata} className="btn">Proceed to Checkout</button>

@@ -2,7 +2,7 @@ import { useSearchParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ProductDetails } from "./";
 import { callAPI } from "../utilities/CallApi";
-import { GB_CURRENCY } from "../utilities/constants";
+import { USD_CURRENCY } from "../utilities/constants";
 
 function SearchResults() {
   const [searchParams] = useSearchParams();
@@ -47,7 +47,7 @@ function SearchResults() {
                   <div className="font-medium text-black p-2">
                     <ProductDetails product={product} ratings={true} />
                     <div className="text-xl xl:text-2xl pt-1">
-                      {GB_CURRENCY.format(product.price)}
+                      {USD_CURRENCY.format(product.price)}
                     </div>
                   </div>
                 </div>
