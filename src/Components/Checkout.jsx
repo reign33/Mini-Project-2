@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
+Navigate } from "react-router-dom";
 import { USD_CURRENCY } from "../utilities/constants";
 import {
   removeFromCart,
@@ -9,6 +10,11 @@ import {
 } from "../redux/cartSlice";
 
 function Checkout() {
+  const navigate = useNavigate();
+  function gotocheckoutdata(){
+    navigate('/admin/checkoutdata')
+  }
+
   const products = useSelector((state) => state.cart.products);
   const itemsNumber = useSelector((state) => state.cart.productsNumber);
   const subtotal = useSelector((state) =>
@@ -105,7 +111,7 @@ function Checkout() {
                 {USD_CURRENCY.format(subtotal)}
               </span>
             </div>
-            <button className="btn">Proceed to Checkout</button>
+            <button onClick={gotocheckoutdata} className="btn">Proceed to Checkout</button>
           </div>
         </div>
       </div>
