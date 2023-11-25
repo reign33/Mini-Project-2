@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function LogInForm() {
+function LoginPage() {
     const [details, setDetails] = useState({email:"", password:""});
 
     const adminUser = {
@@ -104,3 +104,5 @@ export default function LogInForm() {
     </div>
   )
 }
+
+export default LoginPage

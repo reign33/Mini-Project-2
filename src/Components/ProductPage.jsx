@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ProductDetails} from "./";
-import { GB_CURRENCY } from '../utilities/constants';
+import { USD_CURRENCY } from '../utilities/constants';
 import { callAPI } from "../utilities/CallApi";
 import { addToCart } from "../redux/cartSlice";
 
@@ -47,7 +47,7 @@ function ProductPage() {
               </div>
             </div>
             <div className='col-span-2 p-4 rounded bg-white'>
-              <div className='text-xl xl:text-2xl text-red-700 text-right font-semibold'>{GB_CURRENCY.format (product.price)}</div>
+              <div className='text-xl xl:text-2xl text-red-700 text-right font-semibold'>{USD_CURRENCY.format (product.price)}</div>
               <div className='text-base xl:text-lg text-gray-500 text-right font-semibold'>RRP<span className='line-through'>{product.oldPrice}</span></div>
               <div className='text-sm xl:text-base text-blue-500 font-semibold mt-3'>FREE Returns</div>
               <div className='text-sm xl:text-base text-blue-500 font-semibold mt-1'>FREE Delivery</div>
