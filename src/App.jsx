@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import "./index.css";
 import { HomePage, SearchResults, ProductPage, Checkout, LoginPage, SignUpPage, Navbar, Footer} from "./components";
 import Dashboard from "./admin/Dashboard";
@@ -10,7 +11,7 @@ import AddProduct from "./admin/AddProduct";
 import AllProduct from "./admin/AllProduct";
 import ReportProduct from "./admin/ReportProduct";
 import Order from "./admin/Order";
-import CheckoutData from "./Components/CheckoutData";
+import CheckoutData from "./components/CheckoutData";
 import SideBarPage from "./admin/SideBarPage";
 
 function App() {

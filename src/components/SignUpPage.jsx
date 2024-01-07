@@ -20,13 +20,23 @@ function SignUpPage() {
     handleSubmit,
   } = useForm();
 
+  // const onSubmit = (data) => {
+  //   const newdata = [...forms, data];
+  //   setForms(newdata);
+  //   localStorage.setItem("forms", JSON.stringify(newdata));
+  //   navigate('/login');
+  //   console.log("forms update", forms);
+  // };
+
   const onSubmit = (data) => {
-    const newdata = [...forms, data];
-    setForms(newdata);
-    localStorage.setItem("forms", JSON.stringify(newdata));
-    navigate('/login');
-    console.log("forms update", forms);
-  }
+    setForms((prevForms) => {
+      const newdata = [...prevForms, data];
+      localStorage.setItem("forms", JSON.stringify(newdata));
+      navigate('/login');
+      console.log("forms update", newdata);
+      return newdata;
+    });
+  };
 
   useEffect(() => {
     const saveForms = JSON.parse(localStorage.getItem('forms')) || [];
