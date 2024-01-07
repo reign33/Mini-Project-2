@@ -12,16 +12,16 @@ function Navbar() {
     const cart = useSelector((state) => state.cart.productsNumber);
     const navigate=useNavigate();
     function goToLogIn(){
-        navigate('/admin/login')
+        navigate('/login');
     }
     function goToSignUp(){
-        navigate('/admin/signup')
+        navigate('/signup');
     }
     function goToHomePage(){
         navigate('/')
     }
     const Logout = () => {
-      navigate('/admin/login')
+      navigate('/login');
     }
 
     const [toggled, setToggled] = useState(false);
@@ -71,12 +71,12 @@ function Navbar() {
 
                                 <div className="right_content h-[25vh] mt-[10px] text-[13px] text-black pl-[10px]">
                                     <h4 className="font-medium">Your Account</h4>
-                                    <p><a className="hover:text-[#FF9900]" href="">Account</a></p>
-                                    <p><a className="hover:text-[#FF9900]" href="">Orders</a></p>
-                                    <p><a className="hover:text-[#FF9900]" href="">Recommendations</a></p>
-                                    <p><a className="hover:text-[#FF9900]" href="">Browsing History</a></p>
-                                    <p><a className="hover:text-[#FF9900]" href="">Watchlist</a></p>
-                                    <p><a className="hover:text-[#FF9900]" href="" onClick={Logout}>Logout</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#">Account</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#">Orders</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#">Recommendations</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#">Browsing History</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#">Watchlist</a></p>
+                                    <p><a className="hover:text-[#FF9900]" href="#" onClick={Logout}>Logout</a></p>
                                 </div>
                             </div> 
                         </div>

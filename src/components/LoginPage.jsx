@@ -27,75 +27,75 @@ function LoginPage() {
 
     const navigate = useNavigate();
     function handleBackToSignUp(){
-        navigate('/admin/signup')
+        navigate('/signup');
     }
     function goToHomePage(){
-        navigate('/')
+        navigate('/');
     }
 
   return (
-    <div class="m-0 p-0 box-border">
-    <div class="container w-1/2 m-auto">
-        <div class="logo w-32 block m-auto">
-            <img class="m-3" src="/amazon-logo-transparent.png" onClick={goToHomePage} alt="Amazon Logo" srcSet="" />
+    <div className="m-0 p-0 box-border">
+    <div className="container w-1/2 m-auto">
+        <div className="logo w-32 block m-auto">
+            <img className="m-3" src="/amazon-logo-transparent.png" onClick={goToHomePage} alt="Amazon Logo" srcSet="" />
         </div>
         {/* <!-- logo end --> */}
-        <div class="loginform w-1/2 m-auto border-[2px] rounded-lg border-gray-200 p-[20px]">
-            <h1 class="font-sans text-black font-normal text-3xl mb-2">Sign In</h1>
+        <div className="loginform w-1/2 m-auto border-[2px] rounded-lg border-gray-200 p-[20px]">
+            <h1 className="font-sans text-black font-normal text-3xl mb-2">Sign In</h1>
 
             <form onSubmit={submitHandler}>
-            <p class="font-semibold text-sm my-[10px]">
+            <p className="font-semibold text-sm my-[10px]">
                 Email or mobile phone number</p>
             <input
-                class="focus:border-[3px] outline-none focus:border-blue-200
+                className="focus:border-[3px] outline-none focus:border-blue-200
                 border-[1px] rounded-[3px] border-[#a6a6a6] w-[100%] px-[1px] py-[1px]"
                 type="text" name="email"
                 onChange={e => setDetails({...details, email: e.target.value})} value={details.email}/>
-                <p class="font-semibold text-sm my-[10px]">Password</p>
+                <p className="font-semibold text-sm my-[10px]">Password</p>
             <input
-                class="focus:border-[3px] outline-none focus:border-blue-200
+                className="focus:border-[3px] outline-none focus:border-blue-200
                 border-[1px] rounded-[3px] border-[#a6a6a6] w-[100%] px-[1px] py-[1px]"
                 type="password" name="password" id="password"
-                onChange={e => setDetails({...details, password: e.target.value})} value={details.password}
+                value={details.password}
+                onChange={e => setDetails({...details, password: e.target.value})}
                 />
 
-            <button class="mt-[12px] border rounded-lg py-[5px] text-sm w-[100%] bg-[#f8db02] hover:bg-[#ebd004]" type="submit">
+            <button className="mt-[12px] border rounded-lg py-[5px] text-sm w-[100%] bg-[#f8db02] hover:bg-[#ebd004]" type="submit">
                 Continue
             </button>
             </form>
-            <p class="text-xs font-medium mt-3 mb-2 text-gray-800 p-1">
+
+            <p className="text-xs font-medium mt-3 mb-2 text-gray-800 p-1">
                 By continuing, you agree to Amazon's 
-                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/"> Contitions of
+                <a className="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" > Contitions of
                     Use </a>
                 and
-                <a class="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" href="/"> Privacy Notice</a>.
+                <a className="cursor-pointer hover:text-red-700 hover:underline text-[#0066c0]" > Privacy Notice</a>.
             </p>
-            <span class="text-[8px] p-1">►</span>
-            <a class="text-[#0066c0] cursor-pointer hover:underline hover:text-red-700 font-normal text-sm"
-                href="/"> Need Help?</a>
+            <span className="text-[8px] p-1">►</span>
+            <a className="text-[#0066c0] cursor-pointer hover:underline hover:text-red-700 font-normal text-sm"> Need Help?</a>
         </div>
-        <div class="lower mt-6 w-1/2 m-auto ">
-            <p class="m-auto max-w-fit text-gray-500 text-xs ">
+        <div className="lower mt-6 w-1/2 m-auto ">
+            <p className="m-auto max-w-fit text-gray-500 text-xs ">
                 New to Amazon
             </p>
             <button
-                class="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 "
+                className="mt-[14px] border-gray-300 border rounded-lg py-[5px] text-sm w-[100%] hover:bg-gray-50 "
                 onClick={handleBackToSignUp}>Create
                 your Amazon account</button>
         </div>
 
         {/* <!-- lowest container --> */}
-        <div class="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none ">
-            <div class="mx-auto w-1/2 text-center">
-                <p class=" mt-5 mx-auto text-xs font-medium"> <a
-                        class="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]" href="/">Contidions
-                        of Use</a> <a class="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]"
-                        href="/">Privacy Notice</a><a
-                        class="cursor-pointer  m-4  hover:text-red-700 hover:underline text-[#0066c0]" href="/">Help</a>
+        <div className="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none ">
+            <div className="mx-auto w-1/2 text-center">
+                <p className=" mt-5 mx-auto text-xs font-medium"> <a
+                        className="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]">Contidions
+                        of Use</a> <a className="cursor-pointer m-4 hover:text-red-700 hover:underline text-[#0066c0]">Privacy Notice</a><a
+                        className="cursor-pointer  m-4  hover:text-red-700 hover:underline text-[#0066c0]">Help</a>
                 </p>
             </div>
-            <div class="mx-auto w-1/2">
-                <p class=" my-3 mx-auto max-w-fit text-gray-500 text-xs">&copy; 1996-2023, Amazon.com, Inc. or its
+            <div className="mx-auto w-1/2">
+                <p className=" my-3 mx-auto max-w-fit text-gray-500 text-xs">&copy; 1996-2023, Amazon.com, Inc. or its
                     affiliates</p>
             </div>
 

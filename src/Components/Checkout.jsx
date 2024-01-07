@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ProductDetails } from "./";
 import {useNavigate } from "react-router-dom";
 import { USD_CURRENCY } from "../utilities/constants";
+
 import {
   removeFromCart,
   decrementInCart,
@@ -12,7 +13,7 @@ import {
 function Checkout() {
   const navigate = useNavigate();
   function gotocheckoutdata(){
-    navigate('/admin/checkoutdata')
+    navigate('/checkoutdata')
   }
 
   const products = useSelector((state) => state.cart.products);

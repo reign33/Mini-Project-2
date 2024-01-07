@@ -25,6 +25,7 @@ export const cartSlice = createSlice({
       state.productsNumber =
         state.productsNumber + parseInt(action.payload.quantity);
     },
+    
     removeFromCart: (state, action) => {
       // find the product removing the array
       const productToRemove = state.products.find(
@@ -46,6 +47,29 @@ export const cartSlice = createSlice({
       }
       state.productsNumber = state.productsNumber + 1;
     },
+
+
+    // removeFromCart: (state, action) => {
+    //   const productIdToRemove = action.payload;
+    //   const updatedProducts = state.products.filter(
+    //     (product) => product.id !== productIdToRemove
+    //   );
+    
+    //   const removedProduct = state.products.find(
+    //     (product) => product.id === productIdToRemove
+    //   );
+    
+    //   const updatedProductsNumber =
+    //     state.productsNumber - (removedProduct ? removedProduct.quantity : 0);
+    
+    //   return {
+    //     ...state,
+    //     products: updatedProducts,
+    //     productsNumber: updatedProductsNumber,
+    //   };
+    // },
+
+
     decrementInCart: (state, action) => {
       const itemDec = state.products.find((item) => item.id === action.payload);
       if (itemDec.quantity === 1) {

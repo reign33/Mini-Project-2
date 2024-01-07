@@ -8,9 +8,6 @@ function AddProduct() {
   } 
 
   return (
-    <div className='flex'>
-    <SideBarPage />
-        
         <div className='flex flex-col justify-evenly items-start w-[170vh] h-[80vh] border border-[#DDDDDD] text-[14px] rounded-xl mt-[10px] ml-[30px] pl-[30px] shadow-xl mb-[10px]'>
           <p className='text-[25px] font-medium'>Add Product</p>
 
@@ -89,7 +86,6 @@ function AddProduct() {
           font-medium rounded-lg px-[10px] py-[3px] active:bg-[#EC6E45]'>Update Product</button>
           </div>
          </div>
-  </div>
   )
 }
 

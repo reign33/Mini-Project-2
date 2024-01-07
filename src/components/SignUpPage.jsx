@@ -1,23 +1,17 @@
 import React, {useEffect, useState} from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import {useForm} from 'react-hook-form';
 
 function SignUpPage() {
-
-  useEffect(() => {
-    const saveForms = JSON.parse(localStorage.getItem('forms')) || [];
-    setForms(saveForms);
-  }, []);
-
   const [forms, setForms] = useState([]);
   const navigate=useNavigate();
 
-  function handleBackToLogin(){
-    navigate('/admin/login')
+  function goToHomePage(){
+    navigate('/');
   }
 
-  function goToHomePage(){
-    navigate('/')
+  function goToLogIn(){
+    navigate('/login');
   }
 
   const {
@@ -30,8 +24,14 @@ function SignUpPage() {
     const newdata = [...forms, data];
     setForms(newdata);
     localStorage.setItem("forms", JSON.stringify(newdata));
+    navigate('/login');
+    console.log("forms update", forms);
   }
 
+  useEffect(() => {
+    const saveForms = JSON.parse(localStorage.getItem('forms')) || [];
+    setForms(saveForms);
+  }, []);
 
   return (
     <div className="m-0 p-0 box-border">
@@ -116,7 +116,7 @@ function SignUpPage() {
             <p className="text-xs font-medium text-gray-800 pt-[20px]">
               <input className='mr-[5px]' type="checkbox"/>
                 I accept the 
-                <a className="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]" href="/">Terms and Conditions</a></p>
+                <a className="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]" onClick={goToLogIn}>Terms and Conditions</a></p>
         </div>
 
         <div className="lower mt-6 w-1/2 m-auto ">
@@ -128,8 +128,8 @@ function SignUpPage() {
         {/* <!-- lowest container --> */}
         <div className="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none text-center ">
             <div className="mx-auto w-1/2">
-                <p className=" mt-5 mx-auto text-xs font-medium" onClick={handleBackToLogin}>Already have an account?<a
-                        className="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]">Login here</a>
+                <p className=" mt-5 mx-auto text-xs font-medium">Already have an account?<a
+                        className="cursor-pointer m-1 hover:text-red-700 hover:underline text-[#0066c0]" onClick={goToLogIn}>Login here</a>
                 </p>
             </div>
         </div>
