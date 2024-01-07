@@ -20,14 +20,6 @@ function SignUpPage() {
     handleSubmit,
   } = useForm();
 
-  // const onSubmit = (data) => {
-  //   const newdata = [...forms, data];
-  //   setForms(newdata);
-  //   localStorage.setItem("forms", JSON.stringify(newdata));
-  //   navigate('/login');
-  //   console.log("forms update", forms);
-  // };
-
   const onSubmit = (data) => {
     setForms((prevForms) => {
       const newdata = [...prevForms, data];
@@ -49,8 +41,6 @@ function SignUpPage() {
         <div className="logo w-32 block m-auto">
             <img className="m-3" src="/amazon-logo-transparent.png" onClick={goToHomePage} alt="amazon logo"/>
         </div>
-        {/* <!-- logo end --> */}
-
         <form onSubmit={handleSubmit(onSubmit)}>
         <div className="loginform w-1/2 m-auto border-[2px] rounded-lg border-gray-200 p-[20px]">
             <h1 className="font-sans text-black font-normal text-3xl mb-2">Create your account</h1>
@@ -98,7 +88,7 @@ function SignUpPage() {
                 {errors.password?.type === "maxLength" &&
                 "Entered password is more than 16 characters"}
                 </div>
-                 <p>{register}</p>
+                 <p>{JSON.stringify(register)}</p>
 
             <p className="font-semibold text-sm mb-[1px] pt-[20px]"> Confirm password</p>
             <input
@@ -135,7 +125,6 @@ function SignUpPage() {
         </div>
         </form>
 
-        {/* <!-- lowest container --> */}
         <div className="lowest container my-6 mx-auto border-t-[1px] border-gray-300 rounded-none text-center ">
             <div className="mx-auto w-1/2">
                 <p className=" mt-5 mx-auto text-xs font-medium">Already have an account?<a
