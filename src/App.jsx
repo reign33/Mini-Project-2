@@ -13,16 +13,7 @@ import Order from "./admin/Order";
 import CheckoutData from "./Components/CheckoutData";
 import SideBarPage from "./admin/SideBarPage";
 
-
 function App() {
-  return (
-    <BrowserRouter>
-      <AppContent />
-    </BrowserRouter>
-  );
-}
-
-function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith("/admin");
   const isLogin = location.pathname === "/login";
