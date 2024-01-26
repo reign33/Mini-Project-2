@@ -9,13 +9,13 @@ import { Link, useNavigate } from 'react-router-dom';
 
 
 function AllCategory() {
-  const [data, setData] = useState([])
-  const navigate = useNavigate()
-  useEffect(()=> {
-    axios.get('http://localhost:8000/category')
-    .then(res => setData(res.data))
-    .catch(err => console.log(err))
-  }, [])
+  // const [data, setData] = useState([])
+  // const navigate = useNavigate()
+  // useEffect(()=> {
+  //   axios.get('http://localhost:8000/category')
+  //   .then(res => setData(res.data))
+  //   .catch(err => console.log(err))
+  // }, [])
 
   return (
   
@@ -49,7 +49,7 @@ function AllCategory() {
               </tr>
             </thead>
             <tbody>
-              {data.map((d, i)=> (
+              {/* {data.map((d, i)=> (
                 <tr key={i} className='flex justify-between text-[16px] text-[gray] font-medium p-[5px] m-[1rem] rounded-lg'>
                   <td></td>
                   <td className='text-left w-[200px]'>{d.id}</td>
@@ -64,7 +64,7 @@ function AllCategory() {
                     </button>
                   </td>
                 </tr>
-              ))}
+              ))} */}
             </tbody>
           </table>
         </div>
