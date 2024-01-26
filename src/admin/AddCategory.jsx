@@ -22,9 +22,10 @@ function AddCategory() {
 
   return (
     
-    <div className='flex'>
-      <SideBarPage />
-      <form action="">
+
+    // <div className='flex'>
+    //   <SideBarPage />
+      <form onSubmit={handleSubmit} action="">
         <div className='flex flex-col justify-evenly items-start w-[80vh] h-[35vh] border border-[#DDDDDD] rounded-xl mt-[30px] ml-[30px] pl-[30px] shadow-xl'>
           <p className='text-[25px]'>Add Category</p>
             <input className='sample w-[20rem] h-[4rem] rounded-xl border border-[gray] pl-[5px]' type='text' name="" placeholder=" Category name" id="" />
@@ -36,7 +37,7 @@ function AddCategory() {
             </button>
         </div>
       </form>
-    </div>
+    // </div>
   )
 }
 

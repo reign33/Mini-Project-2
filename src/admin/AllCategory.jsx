@@ -18,9 +18,7 @@ function AllCategory() {
   // }, [])
 
   return (
-    
-    <div className='flex'>
-      <SideBarPage />
+  
       <div className='flex flex-col items-center border w-[182vh]'>
         <div className='flex justify-between items-center w-[160vh] h-[15vh]'>
           <div>
@@ -155,9 +153,7 @@ function AllCategory() {
             <button className='w-[100px] bg-[#F0F0F0] rounded-lg p-[5px] active:bg-[gray] active:text-[white]' type="button">Next</button>
           </div>
         </div>
-
       </div>
-    </div>
   )
 
   function handleDelete(id) {

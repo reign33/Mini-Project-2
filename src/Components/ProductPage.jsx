@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { ProductDetails} from "./";
+import { ProductDetails} from ".";
 import { USD_CURRENCY } from '../utilities/constants';
 import { callAPI } from "../utilities/CallApi";
 import { addToCart } from "../redux/cartSlice";

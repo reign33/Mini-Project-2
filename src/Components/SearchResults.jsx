@@ -1,6 +1,6 @@
 import { useSearchParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ProductDetails } from "./";
+import { ProductDetails } from ".";
 import { callAPI } from "../utilities/CallApi";
 import { USD_CURRENCY } from "../utilities/constants";
 

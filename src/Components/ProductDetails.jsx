@@ -1,4 +1,4 @@
-import { ProductBadge, ProductRatings } from './'
+import { ProductBadge, ProductRatings } from '.'
 
 function ProductDetails ({product, ratings}) {
   return (

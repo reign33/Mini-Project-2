@@ -1,4 +1,4 @@
-import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from "./";
+import { Carousel, HomePageCard, CarouselCategory, CarouselProduct } from ".";
 
 function HomePage() {
   return (
